@@ -1,4 +1,4 @@
-﻿namespace CoffeeShop.Drinks
+﻿namespace CoffeeShop
 {
     public interface IDrink
     {
