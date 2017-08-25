@@ -1,6 +1,6 @@
 ﻿namespace CoffeeShop.Complements
 {
-    using CoffeeShop.Drinks;
+    using global::CoffeeShop.Drinks;
 
     public class Nata : IDrink
     {

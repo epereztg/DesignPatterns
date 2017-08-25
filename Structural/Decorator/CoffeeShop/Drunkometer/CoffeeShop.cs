@@ -1,6 +1,6 @@
 ﻿namespace CoffeeShop
 {
-    public class Drunkometer
+    public class CoffeeShop
     {
         public static void Main(string[] args)
         {           
