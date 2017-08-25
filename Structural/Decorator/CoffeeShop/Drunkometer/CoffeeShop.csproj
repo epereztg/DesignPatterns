@@ -42,9 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Complements\Canela.cs" />
+    <Compile Include="Complements\Leche.cs" />
+    <Compile Include="Complements\Nata.cs" />
+    <Compile Include="Complements\Orujo.cs" />
     <Compile Include="Drinks\Colacao.cs" />
     <Compile Include="Drinks\Coffee.cs" />
-    <Compile Include="Complements\Complements.cs" />
+    <Compile Include="Complements\Soja.cs" />
     <Compile Include="IDrink.cs" />
     <Compile Include="CoffeeShop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
