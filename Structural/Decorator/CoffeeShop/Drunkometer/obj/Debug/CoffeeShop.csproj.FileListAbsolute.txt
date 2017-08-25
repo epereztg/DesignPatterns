@@ -1,0 +1,6 @@
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\Drunkometer\bin\Debug\CoffeeShop.exe.config
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\Drunkometer\bin\Debug\CoffeeShop.exe
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\Drunkometer\bin\Debug\CoffeeShop.pdb
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\Drunkometer\obj\Debug\CoffeeShop.csprojResolveAssemblyReference.cache
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\Drunkometer\obj\Debug\CoffeeShop.exe
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\Drunkometer\obj\Debug\CoffeeShop.pdb

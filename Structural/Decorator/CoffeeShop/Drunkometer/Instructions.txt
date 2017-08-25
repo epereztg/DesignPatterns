@@ -1,0 +1,29 @@
+﻿Ejercicio.
+
+En una cafetería se pueden hacer cafés y colacaos.
+El precio base es
+Café :1€ 
+Colacao: 1.20€ 
+
+A una bebida base se le pueden echar la cantidad de complementos que se quiera.
+Nata: 0.50€
+Canela:0.15€
+Leche:0.10€
+Soja:0.20€
+Orujo:1€
+
+Hacer un programa que calcule el precio de una bebida dada su base más sus ingredientes
+
+Para probar un poco más el programa tiene que tener UnitTest
+
+Estos serán las distintas aserciones de cada test
+
+•	Assert.AreEqual (1, cafe.Precio())
+•	Assert.AreEqual (2, carajillo.Precio())
+•	Assert.AreEqual (1.20, colacao.Precio())
+•	Assert.AreEqual (1.35, colacaoConCanela.Precio())
+•	Assert.AreEqual(1.20, desayunoJose.Precio()) //Café + soja
+•	Assert.AreEqual(1.60, vienes.Precio()) //café + leche + nata
+•	Assert.AreEqual(2.70, especial.Precio()) //café + doble de leche + nata + Orujo
+
+

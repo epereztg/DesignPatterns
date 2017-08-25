@@ -1,0 +1,21 @@
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer\bin\Debug\Drunkometer.exe.config
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer\obj\Debug\Drunkometer.csprojResolveAssemblyReference.cache
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer\bin\Debug\Drunkometer.exe
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer\bin\Debug\Drunkometer.pdb
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer\obj\Debug\Drunkometer.exe
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer\obj\Debug\Drunkometer.pdb
+D:\Projects\Drunkometer\Drunkometer\bin\Debug\Drunkometer.exe.config
+D:\Projects\Drunkometer\Drunkometer\bin\Debug\Drunkometer.exe
+D:\Projects\Drunkometer\Drunkometer\bin\Debug\Drunkometer.pdb
+D:\Projects\Drunkometer\Drunkometer\obj\Debug\Drunkometer.csprojResolveAssemblyReference.cache
+D:\Projects\Drunkometer\Drunkometer\obj\Debug\Drunkometer.exe
+D:\Projects\Drunkometer\Drunkometer\obj\Debug\Drunkometer.pdb
+D:\Projects\DesignPatterns\Behavioral\Observer\Drunkometer\Drunkometer\bin\Debug\Drunkometer.exe.config
+D:\Projects\DesignPatterns\Behavioral\Observer\Drunkometer\Drunkometer\obj\Debug\Drunkometer.exe
+D:\Projects\DesignPatterns\Behavioral\Observer\Drunkometer\Drunkometer\obj\Debug\Drunkometer.pdb
+D:\Projects\DesignPatterns\Behavioral\Observer\Drunkometer\Drunkometer\bin\Debug\Drunkometer.exe
+D:\Projects\DesignPatterns\Behavioral\Observer\Drunkometer\Drunkometer\bin\Debug\Drunkometer.pdb
+D:\Projects\DesignPatterns\Behavioral\Observer\Drunkometer\Drunkometer\obj\Debug\Drunkometer.csprojResolveAssemblyReference.cache
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\Drunkometer\bin\Debug\Drunkometer.exe.config
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\Drunkometer\obj\Debug\Drunkometer.exe
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\Drunkometer\obj\Debug\Drunkometer.pdb

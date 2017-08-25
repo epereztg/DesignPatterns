@@ -1,0 +1,29 @@
+﻿Se revisará las soluciones de cada uno y lo que se ha aprendido. Se puede hacer en el lenguaje que dé la gana.
+ 
+El ejercicio es muy simple
+ 
+Versión 1.0
+Hay un objeto “guardia civil” que hace test de alcoholemia. Si alguno supera el 2 el sistema de multas (otro objeto ) imprimirá la multa en pantalla.
+Paras simplificar al máximo el problema los test serán un array de valores y se llamarán dentro de un bucle for al guardia civil
+ 
+Input. Test Alcohol [1.5 , 9, 2.3]
+ 
+Salida por pantalla.
+“Borracho detectado con 9% de alcohol”
+“Borracho detectado con 2.3% de alcohol”
+ 
+ 
+Interfaz del guardia civil ITesteador { void hacerTest(int ResultadoDelTets) } más lo que se necesite
+ 
+Objeto: SistemaMultas (A diseñar usando el patrón )
+ 
+ 
+ 
+Versión 2.0
+ 
+Añadir a otro observador. AvisarPrensa. Será un sistema que avise a mi amigo de la presa para sacarme una mordidita cuando haya un súper borracho. Nivel de alcohol mayor de 7
+ 
+Salida:
+“Borracho detectado con 9% de alcohol”
+“Súper borracho detectado (9%) llamar a mi amigo de la prensa”
+“Borracho detectado con 2.3% de alcohol”

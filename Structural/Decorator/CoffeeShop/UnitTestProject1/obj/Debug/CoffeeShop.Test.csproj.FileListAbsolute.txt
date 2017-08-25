@@ -1,0 +1,9 @@
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\UnitTestProject1\bin\Debug\CoffeeShop.exe
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\UnitTestProject1\bin\Debug\CoffeeShop.pdb
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\UnitTestProject1\obj\Debug\CoffeeShop.Test.csprojResolveAssemblyReference.cache
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\Projects\DesignPatterns\Structural\Decorator\CoffeeShop\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
