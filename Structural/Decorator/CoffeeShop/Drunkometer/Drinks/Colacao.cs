@@ -1,4 +1,4 @@
-﻿namespace CoffeeShop.Models
+﻿namespace CoffeeShop.Drinks
 {
     public class Colacao : IDrink
     {

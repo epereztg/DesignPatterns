@@ -1,5 +1,7 @@
-﻿namespace CoffeeShop.Models
+﻿namespace CoffeeShop.Complements
 {
+    using CoffeeShop.Drinks;
+
     public class Nata : IDrink
     {
         private readonly IDrink _drink;
@@ -72,7 +74,6 @@
         {
             return _drink.Precio() + _precioSoja;
         }
-
 
         public Soja(IDrink drink)
         {

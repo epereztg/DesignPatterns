@@ -1,8 +1,10 @@
-﻿using CoffeeShop.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace UnitTestProject1
+﻿namespace UnitTestProject1
 {
+
+    using CoffeeShop.Complements;
+    using CoffeeShop.Drinks;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class CoffeeShopTest
     {
