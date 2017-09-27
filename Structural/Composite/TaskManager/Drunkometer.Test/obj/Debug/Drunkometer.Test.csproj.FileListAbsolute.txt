@@ -1,0 +1,9 @@
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer.Test\bin\Debug\Drunkometer.Test.dll
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer.Test\bin\Debug\Drunkometer.Test.pdb
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer.Test\bin\Debug\Drunkometer.exe
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer.Test\bin\Debug\Drunkometer.pdb
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer.Test\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer.Test\obj\Debug\Drunkometer.Test.csprojResolveAssemblyReference.cache
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer.Test\obj\Debug\Drunkometer.Test.dll
+c:\users\elenaptg\documents\visual studio 2015\Projects\Drunkometer\Drunkometer.Test\obj\Debug\Drunkometer.Test.pdb
