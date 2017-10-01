@@ -8,17 +8,10 @@ namespace Composite
         private readonly List<IComponent> children = new List<IComponent>();
 
         public Composite()
-        //   : base(horas)
         {
           
         }
 
-        private int _horas;
-        public int Horas
-        {
-            get { return _horas; }
-            set { _horas = value; }
-        }
 
         public void Add(IComponent component)
         {
@@ -26,19 +19,16 @@ namespace Composite
         }
 
      
-        public int Display()
+        public int Horas()
         {
           
             int horas = 0;
             foreach (var component in this.children)
             {
-                //component.Display();
-                //horas += component.Horas;
-                horas += component.Display();
-
+                horas += component.Horas();
 
             }
-            //Console.WriteLine(horas);
+            return horas;
         }
     }
 }

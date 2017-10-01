@@ -2,8 +2,8 @@
 
 public interface IComponent
 {
-    int Horas { get; set; }
+    //int Horas { get; set; }
     void Add(IComponent item);
-    int Display();
+    int Horas();
 
 }
