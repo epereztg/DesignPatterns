@@ -1,0 +1,74 @@
+﻿De la Wiki: 
+Propósito
+
+Es un patrón de comportamiento, que permite definir una operación sobre objetos de una jerarquía de clases sin modificar las clases sobre las que opera. Representa una operación que se realiza sobre los elementos que conforman la estructura de un objeto.
+
+Vamos hablando en plata, este patrón permite poner el código de una clase o conjunto de clases en otro sitio, separación de conceptos.
+Es un patrón que solo he usado una vez en producción, pero es más debido a que es una forma distinta de organizar el código que la que estamos acostumbrados. En otros paradigmas es tan habitual que ni lo nombran, se da por hecho.
+
+El ejercicio.
+
+Tenemos las clases del ejercicio anterior Task, UserHistory, Feature, Epic, y Bug. Les añadiremos un par de campos únicos a cada clase. Las Epic tendrán presupuesto, las features el equipo que las hace, las User History putos de historia, y las Task horas que se han tardado, de los bugs pasamos
+Suponiendo la siguiente estructura
+
+•	Epic1 (Presupuesto 100€)
+    o	Feature1 (Equipo Warrior)
+        	US1 (5 p)
+            •	T1 (4h)
+        	US2 (3p)
+            •	T2 (3h)
+
+Pasada una lista de Epics devuelva un informe en modo texto
+
+Estado del proyecto a xx/xx/xx
+======
+Epic1
+======
+FEATURE 1  by Warriors
+            * US1 (5p)
+                        - T1 [4h]
+            * US2 (3p)
+                        - T2 [3h]
+
+
+Opcional: Hacer otro informe pero en vez de en texto que sea un json.
+{
+type:”epic”,
+description: “Epic1”,
+features: [
+            {type:”feature”,
+            description: “Feature1”,
+            By: “Warriors”,
+            UserHistories: [{
+                    type:”UserHistory”,
+                    description: “US1”,
+                    historyPoints: 5
+                    tasks:[
+                            {
+                            type:”Task”,
+                            description: “T1”,
+                            hours4
+                            }
+                          ]
+                            }
+                            {
+                            type:”UserHistory”,
+                            description: “US2”,
+                            historyPoints: 3
+                            tasks:[
+                                    {
+                                    type:”Task”,
+                                    description: “T2”,
+                                    hours3
+                                    }
+                            ]
+            }
+
+
+            ]
+    }
+    ]
+
+}
+
+

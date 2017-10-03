@@ -1,0 +1,38 @@
+﻿Ejercicio.
+
+Calculo de costes.
+
+En un software de gestión de tareas, existen: tareas (T), US (U),Bugs(B), features (F) y Epics (E).
+
+
+En las tareas se pueden imputar horas.
+Hacer una programa que con la siguiente estructura
+•	Epic1
+    o	F1
+        	U1
+            •	T1: 3h
+            •	T2: 5h
+        	U2
+            •	T3: 2h
+            •	T4: 5H
+•	Epic2
+    o	F2
+        	U3
+            •	T5: 2h
+            •	T6: 9h
+o	F3
+	U4
+•	T7: 1h
+•	T8: 4h
+•	B1: 4h
+
+Calcule las horas imputadas.
+
+Assert.AreEqual(Horas(T1), 3)
+Assert.AreEqual(Horas(B1), 4)
+Assert.AreEqual(Horas(U2), 7)
+Assert.AreEqual(Horas(F2), 11)
+Assert.AreEqual(Horas(E2), 20)
+
+
+
