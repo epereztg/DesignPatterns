@@ -1,12 +1,13 @@
 ﻿using System;
+using TaskManagerReport;
 
 namespace Composite
 {
-    public class Task : IComponent
+    public class TeamTask : IComponent
     {
         //// Constructor
         private int horas;
-        public Task(int horas)
+        public TeamTask(int horas)
         {
             this.horas = horas;
         }
