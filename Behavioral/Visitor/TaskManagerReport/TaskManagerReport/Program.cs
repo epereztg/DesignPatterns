@@ -12,6 +12,7 @@ namespace TaskManagerReport
         static void Main(string[] args)
         {
             //https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained
+            //https://oncodedesign.com/the-visitor-pattern-a-better-implementation/
             //US1
             var root = new Composite();
             root.Add(new TeamTask(3));
