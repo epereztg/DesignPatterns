@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Composite;
+using TaskManagerReport;
 
 namespace TaskManagerReport
 {
-    public interface IVisitor
+    public interface IVisitable
     {
-        void Accept(IComponent task);
-        //void Accept(TeamTask teamTask);
+        void Visit(IVisitor visitor);
     }
-
 }

@@ -71,4 +71,6 @@ features: [
 
 }
 
-
+http://dotnetpattern.com/visitor-design-pattern
+          //https://www.codeproject.com/Articles/588882/TheplusVisitorplusPatternplusExplained
+            //https://oncodedesign.com/the-visitor-pattern-a-better-implementation/

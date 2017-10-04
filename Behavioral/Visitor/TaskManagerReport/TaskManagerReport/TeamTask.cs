@@ -3,7 +3,7 @@ using TaskManagerReport;
 
 namespace Composite
 {
-    public class TeamTask : IComponent
+    public class TeamTask : IComponent, IVisitable
     {
         //// Constructor
         private int horas;
@@ -21,6 +21,10 @@ namespace Composite
         public int Horas()
         {
             return this.horas;
+        }
+        public void Visit(IVisitor visitor)
+        {
+            visitor.Accept(this);
         }
     }
 }
