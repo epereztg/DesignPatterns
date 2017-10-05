@@ -11,14 +11,8 @@ namespace TaskManagerReport
     {
         public void Accept(IComponent task)
         {
-            Console.WriteLine("task {0}",task.Horas());
+            Console.WriteLine("{0}", task.Name());
         }
 
-        //public void Accept(TeamTask teamTask)
-        //{
-        //    Console.WriteLine("teamtask", teamTask.Horas());
-        //}
-
-       
     }
 }

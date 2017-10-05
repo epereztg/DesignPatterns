@@ -4,6 +4,8 @@
     {
         void Add(IComponent item);
         int Horas();
+
+        string Name();
     }
 }
 

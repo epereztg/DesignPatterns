@@ -10,7 +10,6 @@ namespace TaskManagerReport
     public interface IVisitor
     {
         void Accept(IComponent task);
-        //void Accept(TeamTask teamTask);
     }
 
 }

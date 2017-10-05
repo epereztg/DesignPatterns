@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Composite.cs" />
+    <Compile Include="US.cs" />
+    <Compile Include="Feature.cs" />
+    <Compile Include="Epic.cs" />
     <Compile Include="IComponent.cs" />
     <Compile Include="IVisitable.cs" />
     <Compile Include="IVisitor.cs" />

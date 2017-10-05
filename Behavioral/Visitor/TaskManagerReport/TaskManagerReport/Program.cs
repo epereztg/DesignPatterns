@@ -13,71 +13,26 @@ namespace TaskManagerReport
         {
             List<IVisitable> teamWork = new List<IVisitable>();
 
-  
+            //Create task struture
             //US1
-            var root = new Composite();
-            root.Add(new TeamTask(3));
-            root.Add(new TeamTask(5));
-
-            
-          
-
-
-           // Console.WriteLine("US1:" + root.Horas());
+            var us1 = new US(5, "us1");
+            us1.Add(new TeamTask(4, "t1"));
 
             //US2
-            var comp = new Composite();
-            comp.Add(new TeamTask(2));
-            comp.Add(new TeamTask(5));
-            //Console.WriteLine("comp");
-            //Console.WriteLine("US2:" + comp.Horas());
+            var us2 = new US(3, "us2");
+            us2.Add(new TeamTask(3, "t2"));
 
-            //F1
-            var feature1 = new Composite();
-            feature1.Add(root);
-            feature1.Add(comp);
-            //Console.WriteLine("feature1:" + feature1.Horas());
-           
-            //Epic 1
-            var epic = new Composite();
-            epic.Add(feature1);
-            //Console.WriteLine("epic:" + epic.Horas());
+            var f1 = new Feature("Equipo WARRIOR", "Feature1");
+            f1.Add(us1);
+            f1.Add(us2);
 
 
-            //U3
-            var US3 = new Composite();
-            US3.Add(new TeamTask(2));
-            US3.Add(new TeamTask(9));
-            //Console.WriteLine("US3:" + US3.Horas());
+            var epic1 = new Epic(100, "Epic1");
+            epic1.Add(f1);
 
-            var US4 = new Composite();
-            US4.Add(new TeamTask(1));
-            US4.Add(new TeamTask(4));
-            US4.Add(new TeamTask(4));
-            //Console.WriteLine("US4:" + US4.Horas());
+            //Store tasks
+            teamWork.Add(epic1);           
 
-
-            //F2
-            var feature2 = new Composite();
-            feature2.Add(US3);
-            //Console.WriteLine("feature2:" + feature2.Horas());
-
-
-            //F3
-            var feature3 = new Composite();
-            feature3.Add(US4);
-            //Console.WriteLine("feature3:" + feature3.Horas());
-
-
-            //Epic 2
-            var epic2 = new Composite();
-            epic2.Add(feature2);
-            epic2.Add(feature3);
-            //Console.WriteLine("epic2:" + epic2.Horas());
-
-            teamWork.Add(epic);
-            teamWork.Add(epic2);
-            
             Report report = new Report();
             foreach (var element in teamWork)
             {

@@ -3,13 +3,15 @@ using TaskManagerReport;
 
 namespace TaskManagerReport
 {
-    public class Composite : IComponent, IVisitable
+    public class Epic : IComponent, IVisitable
     {
         private readonly List<IComponent> children = new List<IComponent>();
-
-        public Composite()
+        private double budget;
+        private string name;   
+        public Epic(double budget, string name)
         {
-
+            this.budget = budget;
+            this.name = name;
         }
 
 
@@ -30,13 +32,18 @@ namespace TaskManagerReport
             }
             return horas;
         }
+        public string Name()
+        {
+            return this.name+" (Presupuesto "+ this.budget+"€)";
+        }
 
         public void Visit(IVisitor visitor)
         {
-            //visitor.Accept(this);
+            visitor.Accept(this);
 
             foreach (var component in this.children)
             {
+                //component.Visit(visitor);
                 visitor.Accept(component);
 
             }

@@ -7,11 +7,12 @@ namespace Composite
     {
         //// Constructor
         private int horas;
-        public TeamTask(int horas)
+        private string name;
+        public TeamTask(int horas, string name)
         {
             this.horas = horas;
+            this.name = name;
         }
-
 
         public void Add(IComponent c)
         {
@@ -21,6 +22,10 @@ namespace Composite
         public int Horas()
         {
             return this.horas;
+        }
+        public string Name()
+        {
+            return "*"+this.name+"("+this.horas+")";                
         }
         public void Visit(IVisitor visitor)
         {
