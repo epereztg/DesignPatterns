@@ -9,6 +9,6 @@ namespace TaskManagerReport
 {
     public interface IVisitable
     {
-        void Visit(IVisitor visitor);
+        void Accept(IVisitor visitor);
     }
 }

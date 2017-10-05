@@ -27,9 +27,9 @@ namespace Composite
         {
             return "*"+this.name+"("+this.horas+")";                
         }
-        public void Visit(IVisitor visitor)
+        public void Accept(IVisitor visitor)
         {
-            visitor.Accept(this);
+            visitor.Visit(this);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace TaskManagerReport
         static void Main(string[] args)
         {
             List<IVisitable> teamWork = new List<IVisitable>();
-
+            TextReport report = new TextReport();
             //Create task struture
             //US1
             var us1 = new US(5, "us1");
@@ -25,18 +25,18 @@ namespace TaskManagerReport
             var f1 = new Feature("Equipo WARRIOR", "Feature1");
             f1.Add(us1);
             f1.Add(us2);
-
+           
 
             var epic1 = new Epic(100, "Epic1");
             epic1.Add(f1);
 
             //Store tasks
-            teamWork.Add(epic1);           
+            teamWork.Add(epic1);
 
-            Report report = new Report();
+            
             foreach (var element in teamWork)
-            {
-                element.Visit(report);
+            {               
+               element.Accept(report);
             }
 
             //// Wait for user

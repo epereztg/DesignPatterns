@@ -34,20 +34,31 @@ namespace TaskManagerReport
         }
         public string Name()
         {
-            return this.name+" (Presupuesto "+ this.budget+"€)";
+            return this.name + " (Presupuesto " + this.budget + "€)";
         }
 
-        public void Visit(IVisitor visitor)
-        {
-            visitor.Accept(this);
+        //public void Visit(IVisitor visitor)
+        //{
+        //    visitor.Accept(this);
 
+        //    foreach (var component in this.children)
+        //    {                
+        //        visitor.Accept(component);       
+        //    }
+
+        //}
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
             foreach (var component in this.children)
             {
-                //component.Visit(visitor);
-                visitor.Accept(component);
-
+                //visitor.Visit(component);
+                //visitor.Accept.
+                    component.Accept(visitor);
             }
-
         }
+     
+
+
     }
 }

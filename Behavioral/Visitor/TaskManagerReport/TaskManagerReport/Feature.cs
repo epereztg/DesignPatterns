@@ -38,15 +38,15 @@ namespace TaskManagerReport
             return "\t"+this.name + '(' + this.team + ')';            
         }
 
-        public void Visit(IVisitor visitor)
+        public void Accept(IVisitor visitor)
         {
-            visitor.Accept(this);
+            visitor.Visit(this);
 
-            foreach (var component in this.children)
-            {
-                visitor.Accept(component);
+            //foreach (var component in this.children)
+            //{
+            //    visitor.Accept(component);
 
-            }
+            //}
 
         }
     }

@@ -6,6 +6,8 @@
         int Horas();
 
         string Name();
+
+        void Accept(IVisitor visitor);
     }
 }
 
