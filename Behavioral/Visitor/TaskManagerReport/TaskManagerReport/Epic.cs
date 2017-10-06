@@ -14,7 +14,6 @@ namespace TaskManagerReport
             this.name = name;
         }
 
-
         public void Add(IComponent component)
         {
             this.children.Add(component);
@@ -22,7 +21,6 @@ namespace TaskManagerReport
 
         public int Horas()
         {
-
             int horas = 0;
             foreach (var component in this.children)
             {

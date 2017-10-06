@@ -1,9 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TaskManagerReport
 {
     class TextReport : IVisitor        
     {
+        public void Generate(List<IVisitable> teamWork)
+        {
+            foreach (var element in teamWork)
+            {
+                element.Accept(this);
+            }
+        }
+
         public void Visit(Epic task)
         {
             //Display euro symbol
@@ -14,7 +23,6 @@ namespace TaskManagerReport
                    + task.name + " (Presupuesto " + task.budget + Convert.ToChar('€') + ")" + "\n"
                    + "======\n";
             Console.WriteLine("{0}", display);
-
         }
 
         public void Visit(Feature task)

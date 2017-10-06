@@ -25,7 +25,6 @@ namespace TaskManagerReport
             foreach (var component in this.children)
             {
                 horas += component.Horas();
-
             }
             return horas;
         }

@@ -11,7 +11,7 @@ namespace TaskManagerReport
             TextReport textReport = new TextReport();
             JSONReport jsonReport = new JSONReport();
             
-            //Create task struture
+            //Create task structure
             //US1
             var us1 = new US(5, "us1");
             us1.Add(new TeamTask(4, "t1"));
@@ -37,15 +37,8 @@ namespace TaskManagerReport
             teamWork.Add(epic1);
             teamWork.Add(epic2);
 
-
-            foreach (var element in teamWork)
-            {               
-               element.Accept(textReport);
-            }
-            foreach (var element in teamWork)
-            {
-                element.Accept(jsonReport);
-            }
+            textReport.Generate(teamWork);
+            jsonReport.Generate(teamWork);           
 
             //// Wait for user
             Console.ReadKey();

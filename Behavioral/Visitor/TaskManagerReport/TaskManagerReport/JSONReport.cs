@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TaskManagerReport
 {
     class JSONReport : IVisitor
     {
-        //public void Visit(IVisitor visitor)
-        //{
-        //    //foreach (var component in visitor.children)
-        //    //{
-        //    //    Console.WriteLine("{0}", visitor.Display());
-        //    //}
-        //}
+        public void Generate(List<IVisitable> teamWork)
+        {
+            foreach (var element in teamWork)
+            {
+                element.Accept(this);
+            }
+        }
 
         public void Visit(Epic epic)
         {
@@ -42,21 +43,7 @@ namespace TaskManagerReport
                           + "}"
                           + "]"
                           + "}";
-            //{
-            //    type:UserHistory,
-            //    description: US2,
-            //    historyPoints: 3
-            //    tasks:[
-            //    {
-            //        type:Task,
-            //        description: T2,
-            //        hours3
-            //    }
-            //    ]
-            //}
 
-
-            //]";
 
             Console.WriteLine("{0}", display);
         }
