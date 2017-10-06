@@ -5,6 +5,7 @@ namespace TaskManagerReport
 {
     class JSONReport : IVisitor
     {
+        //TODO use serialize json object 
         public void Generate(List<IVisitable> teamWork)
         {
             foreach (var element in teamWork)
@@ -14,23 +15,19 @@ namespace TaskManagerReport
         }
 
         public void Visit(Epic epic)
-        {
-            //Console.WriteLine("{0}", epic.Display());
-
+        {            
             var display = "{\n type:”epic”,\n description: “Epic1 \n";
             Console.WriteLine("{0}", display);
         }
 
         public void Visit(Feature task)
-        {
-            //var display = "{type: epic,description: epic.name,features: [";
+        {            
             var display = "\t features: [\n { type: feature,\n description:" + task.name + "By: Warriors";
             Console.WriteLine("{0}", display);
         }
 
         public void Visit(US task)
-        {
-            //var display = "{type: epic,description: epic.name,features: [";
+        {            
             var display = "UserHistories: [{\n"
                           + "type: UserHistory,"
                           + "description: US1,"

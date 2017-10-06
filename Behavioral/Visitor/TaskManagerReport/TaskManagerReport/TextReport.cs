@@ -15,10 +15,12 @@ namespace TaskManagerReport
 
         public void Visit(Epic task)
         {
+            DateTime localDate = DateTime.Now;
+
             //Display euro symbol
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            var display = "Estado del proyecto a xx / xx / xx \n"
+            var display = "Estado del proyecto a "+ localDate + "\n"
                    + "======\n"
                    + task.name + " (Presupuesto " + task.budget + Convert.ToChar('€') + ")" + "\n"
                    + "======\n";
