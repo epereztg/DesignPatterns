@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using TaskManagerReport;
 
 namespace TaskManagerReport
 {
@@ -21,10 +19,8 @@ namespace TaskManagerReport
             this.children.Add(component);
         }
 
-
         public int Horas()
         {
-
             int horas = 0;
             foreach (var component in this.children)
             {
@@ -33,21 +29,19 @@ namespace TaskManagerReport
             }
             return horas;
         }
-        public string Name()
+        public string Display()
         {
-            return "\t"+this.name + '(' + this.team + ')';            
+            return "\t" + this.name + '(' + this.team + ')';
         }
 
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);
 
-            //foreach (var component in this.children)
-            //{
-            //    visitor.Accept(component);
-
-            //}
-
+            foreach (var component in this.children)
+            {
+                component.Accept(visitor);
+            }
         }
     }
 }

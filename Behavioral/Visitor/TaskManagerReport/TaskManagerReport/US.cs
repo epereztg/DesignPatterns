@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using TaskManagerReport;
 
 namespace TaskManagerReport
 {
@@ -34,20 +33,19 @@ namespace TaskManagerReport
             return horas;
         }
 
-        public string Name()
+        public string Display()
         {
-            return "\t\t"+this.name+"("+this.storyPoints+")";
+            return "\t \t"+this.name+"("+this.storyPoints+")";
         }
 
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);
 
-            //foreach (var component in this.children)
-            //{
-            //    visitor.Accept(component);
-
-            //}
+            foreach (var component in this.children)
+            {
+                component.Accept(visitor);
+            }
 
         }
     }

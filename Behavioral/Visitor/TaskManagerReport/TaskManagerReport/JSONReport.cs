@@ -2,7 +2,7 @@
 
 namespace TaskManagerReport
 {
-    class TextReport : IVisitor        
+    class JSONReport : IVisitor
     {
         public void Visit(IVisitor visitor)
         {
@@ -19,12 +19,12 @@ namespace TaskManagerReport
 
         public void Visit(Feature task)
         {
-            Console.WriteLine("{0}", task.Display() );
+            Console.WriteLine("{0}", task.Display());
         }
 
         public void Visit(US task)
         {
-            Console.WriteLine("{0}", task.Display() );
+            Console.WriteLine("{0}", task.Display());
         }
 
         public void Visit(TeamTask task)

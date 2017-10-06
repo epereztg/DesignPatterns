@@ -1,9 +1,5 @@
-﻿using Composite;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TaskManagerReport
 {
@@ -12,7 +8,9 @@ namespace TaskManagerReport
         static void Main(string[] args)
         {
             List<IVisitable> teamWork = new List<IVisitable>();
-            TextReport report = new TextReport();
+            TextReport textReport = new TextReport();
+            JSONReport jsonReport = new JSONReport();
+            
             //Create task struture
             //US1
             var us1 = new US(5, "us1");
@@ -36,8 +34,12 @@ namespace TaskManagerReport
             
             foreach (var element in teamWork)
             {               
-               element.Accept(report);
+               element.Accept(textReport);
             }
+            //foreach (var element in teamWork)
+            //{
+            //    element.Accept(jsonReport);
+            //}
 
             //// Wait for user
             Console.ReadKey();

@@ -1,7 +1,6 @@
 ﻿using System;
-using TaskManagerReport;
 
-namespace Composite
+namespace TaskManagerReport
 {
     public class TeamTask : IComponent, IVisitable
     {
@@ -23,9 +22,9 @@ namespace Composite
         {
             return this.horas;
         }
-        public string Name()
+        public string Display()
         {
-            return "*"+this.name+"("+this.horas+")";                
+            return " \t \t \t" + this.name+"("+this.horas+")";                
         }
         public void Accept(IVisitor visitor)
         {
