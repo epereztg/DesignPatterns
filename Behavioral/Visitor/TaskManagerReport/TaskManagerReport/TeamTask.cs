@@ -5,8 +5,8 @@ namespace TaskManagerReport
     public class TeamTask : IComponent, IVisitable
     {
         //// Constructor
-        private int horas;
-        private string name;
+        public int horas;
+        public string name;
         public TeamTask(int horas, string name)
         {
             this.horas = horas;
@@ -22,10 +22,7 @@ namespace TaskManagerReport
         {
             return this.horas;
         }
-        public string Display()
-        {
-            return " \t \t \t" + this.name+"("+this.horas+")";                
-        }
+
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);

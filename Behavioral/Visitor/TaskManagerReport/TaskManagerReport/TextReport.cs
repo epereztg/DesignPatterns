@@ -4,32 +4,35 @@ namespace TaskManagerReport
 {
     class TextReport : IVisitor        
     {
-        public void Visit(IVisitor visitor)
+        public void Visit(Epic task)
         {
-            //foreach (var component in visitor.children)
-            //{
-            //    Console.WriteLine("{0}", visitor.Display());
-            //}
-        }
+            //Display euro symbol
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-        public void Visit(Epic epic)
-        {
-            Console.WriteLine("{0}", epic.Display());
+            var display = "Estado del proyecto a xx / xx / xx \n"
+                   + "======\n"
+                   + task.name + " (Presupuesto " + task.budget + Convert.ToChar('€') + ")" + "\n"
+                   + "======\n";
+            Console.WriteLine("{0}", display);
+
         }
 
         public void Visit(Feature task)
-        {
-            Console.WriteLine("{0}", task.Display() );
+        {            
+            var display = "\t" + task.name + '(' + task.team + ')';
+            Console.WriteLine("{0}", display);
         }
 
         public void Visit(US task)
-        {
-            Console.WriteLine("{0}", task.Display() );
+        {            
+            var display = "\t \t" + task.name + "(" + task.storyPoints + ")";
+            Console.WriteLine("{0}", display);
         }
 
         public void Visit(TeamTask task)
-        {
-            Console.WriteLine("{0}", task.Display());
+        {            
+            var display = " \t \t \t" + task.name + "(" + task.horas + ")";
+            Console.WriteLine("{0}", display);
         }
     }
 }

@@ -6,8 +6,8 @@ namespace TaskManagerReport
     public class Epic : IComponent, IVisitable
     {
         private readonly List<IComponent> children = new List<IComponent>();
-        private double budget;
-        private string name;
+        public double budget;
+        public string name;
         public Epic(double budget, string name)
         {
             this.budget = budget;
@@ -30,16 +30,7 @@ namespace TaskManagerReport
             }
             return horas;
         }
-        public string Display()
-        {
-            //Display euro symbol
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
-            
-            return "Estado del proyecto a xx / xx / xx \n"
-                   + "======\n"
-                   + this.name + " (Presupuesto " + this.budget + Convert.ToChar('€')  +")"+"\n"
-                   + "======\n";            
-        }     
+
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);

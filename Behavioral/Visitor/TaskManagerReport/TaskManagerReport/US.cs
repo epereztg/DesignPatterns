@@ -5,8 +5,8 @@ namespace TaskManagerReport
     public class US : IComponent, IVisitable
     {
         private readonly List<IComponent> children = new List<IComponent>();
-        private int storyPoints;
-        private string name;
+        public int storyPoints;
+        public string name;
 
         public US(int storyPoints, string name)
         {
@@ -31,11 +31,6 @@ namespace TaskManagerReport
 
             }
             return horas;
-        }
-
-        public string Display()
-        {
-            return "\t \t"+this.name+"("+this.storyPoints+")";
         }
 
         public void Accept(IVisitor visitor)

@@ -4,32 +4,37 @@ namespace TaskManagerReport
 {
     class JSONReport : IVisitor
     {
-        public void Visit(IVisitor visitor)
-        {
-            //foreach (var component in visitor.children)
-            //{
-            //    Console.WriteLine("{0}", visitor.Display());
-            //}
-        }
+        //public void Visit(IVisitor visitor)
+        //{
+        //    //foreach (var component in visitor.children)
+        //    //{
+        //    //    Console.WriteLine("{0}", visitor.Display());
+        //    //}
+        //}
 
         public void Visit(Epic epic)
         {
-            Console.WriteLine("{0}", epic.Display());
+            //Console.WriteLine("{0}", epic.Display());
+            var display = "{type: epic,description: epic.name,features: [";
+            Console.WriteLine("{0}", display);
         }
 
         public void Visit(Feature task)
         {
-            Console.WriteLine("{0}", task.Display());
+            var display = "{type: epic,description: epic.name,features: [";
+            Console.WriteLine("{0}", display);
         }
 
         public void Visit(US task)
         {
-            Console.WriteLine("{0}", task.Display());
+            var display = "{type: epic,description: epic.name,features: [";
+            Console.WriteLine("{0}", display);
         }
 
         public void Visit(TeamTask task)
         {
-            Console.WriteLine("{0}", task.Display());
+            var display = "{type: epic,description: epic.name,features: [";
+            Console.WriteLine("{0}", display);
         }
     }
 }

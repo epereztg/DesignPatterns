@@ -6,8 +6,8 @@ namespace TaskManagerReport
     public class Feature : IComponent, IVisitable
     {
         private readonly List<IComponent> children = new List<IComponent>();
-        private string team;
-        private string name;
+        public string team;
+        public string name;
         public Feature(String team, string name)
         {
             this.team = team;
@@ -28,10 +28,6 @@ namespace TaskManagerReport
 
             }
             return horas;
-        }
-        public string Display()
-        {
-            return "\t" + this.name + '(' + this.team + ')';
         }
 
         public void Accept(IVisitor visitor)

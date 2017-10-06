@@ -36,10 +36,10 @@ namespace TaskManagerReport
             {               
                element.Accept(textReport);
             }
-            //foreach (var element in teamWork)
-            //{
-            //    element.Accept(jsonReport);
-            //}
+            foreach (var element in teamWork)
+            {
+                element.Accept(jsonReport);
+            }
 
             //// Wait for user
             Console.ReadKey();

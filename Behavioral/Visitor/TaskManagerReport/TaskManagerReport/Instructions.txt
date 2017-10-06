@@ -50,17 +50,17 @@ features: [
                             hours4
                             }
                           ]
-                            }
+                    }
+                    {
+                    type:”UserHistory”,
+                    description: “US2”,
+                    historyPoints: 3
+                    tasks:[
                             {
-                            type:”UserHistory”,
-                            description: “US2”,
-                            historyPoints: 3
-                            tasks:[
-                                    {
-                                    type:”Task”,
-                                    description: “T2”,
-                                    hours3
-                                    }
+                            type:”Task”,
+                            description: “T2”,
+                            hours3
+                            }
                             ]
             }
 
