@@ -1,17 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace TaskManagerReport
 {
-    public class Feature : IComponent, IVisitable
+    public class US : IComponent
     {
         private readonly List<IComponent> children = new List<IComponent>();
-        public string team;
+        public int storyPoints;
         public string name;
-        public Feature(String team, string name)
+
+        public US(int storyPoints, string name)
         {
-            this.team = team;
+            this.storyPoints = storyPoints;
             this.name = name;
+        }
+        public IIterator CreateIterator()
+        {
+            return new TaskIterator(children);
         }
 
         public void Add(IComponent component)
@@ -19,24 +23,18 @@ namespace TaskManagerReport
             this.children.Add(component);
         }
 
+
         public int Horas()
         {
+
             int horas = 0;
             foreach (var component in this.children)
             {
                 horas += component.Horas();
+
             }
             return horas;
         }
 
-        public void Accept(IVisitor visitor)
-        {
-            visitor.Visit(this);
-
-            foreach (var component in this.children)
-            {
-                component.Accept(visitor);
-            }
-        }
     }
 }

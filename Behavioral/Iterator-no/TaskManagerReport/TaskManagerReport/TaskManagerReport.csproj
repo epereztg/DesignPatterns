@@ -43,17 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IIterator.cs" />
     <Compile Include="JSONReport.cs" />
+    <Compile Include="TaskIterator.cs" />
     <Compile Include="US.cs" />
     <Compile Include="Feature.cs" />
     <Compile Include="Epic.cs" />
     <Compile Include="IComponent.cs" />
-    <Compile Include="IVisitable.cs" />
-    <Compile Include="IVisitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextReport.cs" />
-    <Compile Include="Structure.cs" />
     <Compile Include="TeamTask.cs" />
   </ItemGroup>
   <ItemGroup>

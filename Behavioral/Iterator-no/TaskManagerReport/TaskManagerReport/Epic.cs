@@ -3,17 +3,20 @@ using System.Collections.Generic;
 
 namespace TaskManagerReport
 {
-    public class Feature : IComponent, IVisitable
+    public class Epic : IComponent
     {
         private readonly List<IComponent> children = new List<IComponent>();
-        public string team;
+        public double budget;
         public string name;
-        public Feature(String team, string name)
+        public Epic(double budget, string name)
         {
-            this.team = team;
+            this.budget = budget;
             this.name = name;
         }
-
+        public IIterator CreateIterator()
+        {
+            return new TaskIterator(children);
+        }
         public void Add(IComponent component)
         {
             this.children.Add(component);
@@ -29,14 +32,6 @@ namespace TaskManagerReport
             return horas;
         }
 
-        public void Accept(IVisitor visitor)
-        {
-            visitor.Visit(this);
-
-            foreach (var component in this.children)
-            {
-                component.Accept(visitor);
-            }
-        }
+    
     }
 }

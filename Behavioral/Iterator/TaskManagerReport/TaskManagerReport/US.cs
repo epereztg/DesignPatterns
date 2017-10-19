@@ -13,10 +13,7 @@ namespace TaskManagerReport
             this.storyPoints = storyPoints;
             this.name = name;
         }
-        public IIterator CreateIterator()
-        {
-            return new TaskIterator(children);
-        }
+
 
         public void Add(IComponent component)
         {

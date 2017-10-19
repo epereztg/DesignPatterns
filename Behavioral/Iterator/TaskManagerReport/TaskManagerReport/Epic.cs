@@ -13,10 +13,7 @@ namespace TaskManagerReport
             this.budget = budget;
             this.name = name;
         }
-        public IIterator CreateIterator()
-        {
-            return new TaskIterator(children);
-        }
+
         public void Add(IComponent component)
         {
             this.children.Add(component);
