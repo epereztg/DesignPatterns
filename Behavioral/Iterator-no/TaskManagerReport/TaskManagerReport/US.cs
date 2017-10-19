@@ -2,7 +2,7 @@
 
 namespace TaskManagerReport
 {
-    public class US : IComponent
+    public class US : IComponent, IVisitable
     {
         private readonly List<IComponent> children = new List<IComponent>();
         public int storyPoints;
@@ -35,6 +35,15 @@ namespace TaskManagerReport
             }
             return horas;
         }
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
 
+            foreach (var component in this.children)
+            {
+                component.Accept(visitor);
+            }
+
+        }
     }
 }

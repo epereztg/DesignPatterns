@@ -49,6 +49,9 @@ vikings|US4|6h
  
 Nos han dicho que la estructura que almacena la lista de epics podría ser un array o una lista encadenada. El código desarrollado debe ser compatible con ambas implementaciones.
 
+
+            //http://best-practice-software-engineering.ifs.tuwien.ac.at/patterns/iterator.html
+            //http://www.primaryobjects.com/2008/01/29/using-the-iterator-pattern-in-c-asp-net/
 --------------------------------------------------
 --------------Visitorrr---------------------------
 --------------------------------------------------

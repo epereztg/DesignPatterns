@@ -2,7 +2,7 @@
 
 namespace TaskManagerReport
 {
-    public class TeamTask : IComponent
+    public class TeamTask : IComponent, IVisitable
     {
         //// Constructor
         public int horas;
@@ -25,7 +25,11 @@ namespace TaskManagerReport
         {
             return this.horas;
         }
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
 
-  
+
     }
 }

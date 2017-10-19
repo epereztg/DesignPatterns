@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TaskManagerReport
 {
-    public class Feature: IComponent
+    public class Feature: IComponent, IVisitable
     {
         private List<IComponent> children = new List<IComponent>();
         public string team;
@@ -61,6 +61,14 @@ namespace TaskManagerReport
             }
             return horas;
         }
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
 
+            foreach (var component in this.children)
+            {
+                component.Accept(visitor);
+            }
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace TaskManagerReport
             teamWork.Add(epic2);
 
             textReport.Generate(teamWork);
-            jsonReport.Generate(teamWork);           
+            //jsonReport.Generate(teamWork);           
 
             //// Wait for user
             Console.ReadKey();

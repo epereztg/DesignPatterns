@@ -4,8 +4,8 @@
     {
         void Add(IComponent item);
         int Horas();
-
-        IIterator CreateIterator();
+        void Accept(IVisitor visitor);
+    
     }
 }
 

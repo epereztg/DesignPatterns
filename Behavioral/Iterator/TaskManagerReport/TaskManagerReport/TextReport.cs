@@ -5,6 +5,21 @@ namespace TaskManagerReport
 {
     class TextReport : IVisitor        
     {
+        internal void GenerateIterator(List<IComponent> teamWork)
+        {
+            foreach (var element in teamWork)
+            {
+                IIterator iterator = element.CreateIterator();
+                while (iterator.HasNext())
+                {
+                    IComponent item = (IComponent)iterator.Next();
+                    Console.WriteLine(item);
+                    //Console.WriteLine(item.Horas());
+                    //this.Generate(iterator);
+                }
+            }
+        }
+
         public void Generate(List<IVisitable> teamWork)
         {
             foreach (var element in teamWork)

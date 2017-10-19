@@ -7,8 +7,8 @@ namespace TaskManagerReport
     {
         static void Main(string[] args)
         {
-            List<IComponent> teamWork = new List<IComponent>();
-            //List<IVisitable> teamWork = new List<IVisitable>();
+            //List<IComponent> teamWork = new List<IComponent>();
+            List<IVisitable> teamWork = new List<IVisitable>();
             TextReport textReport = new TextReport();
             //JSONReport jsonReport = new JSONReport();
 
@@ -21,6 +21,10 @@ namespace TaskManagerReport
             var us2 = new US(3, "us2");
             us2.Add(new TeamTask(3, "t2"));
 
+            //US3
+            var us3 = new US(5, "us3");
+            us3.Add(new TeamTask(5, "t3"));
+
             var f1 = new Feature("Equipo WARRIOR", "Feature1");
             f1.Add(us1);
             f1.Add(us2);
@@ -28,6 +32,7 @@ namespace TaskManagerReport
             var f2 = new Feature("Equipo WARRIOR2", "Feature2");
             f2.Add(us1);
             f2.Add(us2);
+            f2.Add(us3);
 
             var epic1 = new Epic(100, "Epic1");
             epic1.Add(f1);
@@ -39,11 +44,7 @@ namespace TaskManagerReport
             teamWork.Add(epic2);
 
             textReport.GenerateIterator(teamWork);
-            //textReport.Generate(teamWork);
-            //jsonReport.Generate(teamWork);           
 
-            //http://best-practice-software-engineering.ifs.tuwien.ac.at/patterns/iterator.html
-            //http://www.primaryobjects.com/2008/01/29/using-the-iterator-pattern-in-c-asp-net/
             //// Wait for user
             Console.ReadKey();
         }

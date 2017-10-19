@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TaskManagerReport
 {
-    public class Epic : IComponent
+    public class Epic : IComponent, IVisitable
     {
         private readonly List<IComponent> children = new List<IComponent>();
         public double budget;
@@ -31,7 +31,14 @@ namespace TaskManagerReport
             }
             return horas;
         }
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+            foreach (var component in this.children)
+            {
+                component.Accept(visitor);
+            }
+        }
 
-    
     }
 }

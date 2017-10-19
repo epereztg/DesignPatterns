@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IIterator.cs" />
+    <Compile Include="IVisitable.cs" />
+    <Compile Include="IVisitor.cs" />
     <Compile Include="JSONReport.cs" />
     <Compile Include="TaskIterator.cs" />
     <Compile Include="US.cs" />

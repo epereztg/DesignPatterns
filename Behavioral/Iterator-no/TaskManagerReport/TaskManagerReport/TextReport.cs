@@ -3,9 +3,15 @@ using System.Collections.Generic;
 
 namespace TaskManagerReport
 {
-    class TextReport /*:  IComponent*/
+    class TextReport : IVisitor
     {
-
+        public void Generate(List<IVisitable> teamWork)
+        {
+            foreach (var element in teamWork)
+            {
+                element.Accept(this);
+            }
+        }
         public void Visit(Epic task)
         {
             DateTime localDate = DateTime.Now;
@@ -32,16 +38,18 @@ namespace TaskManagerReport
             Console.WriteLine("{0}", display);
         }
 
-        internal void GenerateIterator(List<IComponent> teamWork)
+        //public void Visit(Ivisi)
+        internal void GenerateIterator(List<IVisitable> teamWork)
         {
             foreach (var element in teamWork)
             {
                 IIterator iterator = element.CreateIterator();
                 while (iterator.HasNext())
-                {
+                {                   
                     IComponent item = (IComponent)iterator.Next();
                     //Console.WriteLine(item);
-                    Console.WriteLine(item.Horas());
+                    //this.Visit(item);
+                    this.Generate(teamWork);
                 }
             }
         }
