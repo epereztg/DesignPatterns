@@ -44,12 +44,9 @@ namespace TaskManagerReport
         }
         public void Display()
         {
+            Console.Write("{0}", Name);
+            Console.Write("|");
             Console.WriteLine("{0}{1}", Horas(), "h");
-            //Console.Write("|");
-            //foreach (var component in this._children)
-            //{
-            //   component.Display();
-            //}
         }
     }
 }

@@ -73,13 +73,13 @@ namespace TaskManagerReport
 
         public void Display()
         {
-            Console.Write("{0}", team);
-            Console.Write("|");
-            //foreach (var component in this._children)
-            //{
-            //    component.Display();
-            //}
-            Console.WriteLine("{0}{1}", Horas(), "h");
+            
+            foreach (var component in this._children)
+            {
+                Console.Write("{0}", team);
+                Console.Write("|");
+                component.Display();
+            }            
         }
     }
 }
