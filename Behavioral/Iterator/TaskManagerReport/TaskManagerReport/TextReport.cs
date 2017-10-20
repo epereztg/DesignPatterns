@@ -21,7 +21,10 @@ namespace TaskManagerReport
                 while (iterator.HasNext())
                 {
                     IComponent item = (IComponent)iterator.Next();
-                    this.Generate(teamWork);
+                    //this.Generate(teamWork);
+
+                    item.Display();
+                    Console.WriteLine("");
                 }
             }
         }
@@ -35,7 +38,7 @@ namespace TaskManagerReport
 
             var display = "Estado del proyecto a " + localDate + "\n"
                    + "======\n"
-                   + task.name + " (Presupuesto " + task.budget + Convert.ToChar('€') + ")" + "\n"
+                   + task.Name + " (Presupuesto " + task.Budget + Convert.ToChar('€') + ")" + "\n"
                    + "======\n";
             Console.WriteLine("{0}", display);
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TaskManagerReport
 {
@@ -40,6 +41,15 @@ namespace TaskManagerReport
             {
                 component.Accept(visitor);
             }
+        }
+        public void Display()
+        {
+            Console.WriteLine("{0}{1}", Horas(), "h");
+            //Console.Write("|");
+            //foreach (var component in this._children)
+            //{
+            //   component.Display();
+            //}
         }
     }
 }

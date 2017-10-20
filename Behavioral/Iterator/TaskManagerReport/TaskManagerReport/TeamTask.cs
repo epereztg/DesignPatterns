@@ -23,13 +23,18 @@ namespace TaskManagerReport
 
         public int Horas()
         {
-            return this.horas;
+            Display();
+            return this.horas;//Should be void!
+
         }
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);
         }
-
+        public void Display()
+        {
+           // Console.WriteLine("{0}{1}", horas, "h");
+        }
 
     }
 }
