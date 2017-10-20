@@ -1,4 +1,61 @@
-﻿De la Wiki: 
+﻿Hablaremos sobre el patron iterador, y profundizaremos en su implementación en C# y ampliaremos la info para hablar de LINQ  y algún tópico Avanzado….
+ 
+Patrón Iterador
+ 
+(de la wiki )
+En diseño de software, el patrón de diseño Iterador, define una interfaz que declara los métodos necesarios para acceder secuencialmente a un grupo de objetos de una colección. Algunos de los métodos que podemos definir en la interfaz Iterador son:
+ 
+Primero(), Siguiente(), HayMas() y ElementoActual().
+Este patrón de diseño permite recorrer una estructura de datos sin que sea necesario conocer la estructura interna de la misma.
+ 
+Ejercicio
+ 
+Partiendo de una lista de objetos de la estructura de proyecto de ejercicios anteriores (epic, feature, userstory, task):
+ 
+ 
+•           Epic1 (Presupuesto 100€)
+            o          Feature1 (Equipo Warrior)
+                        -           US1 (5 p)
+                                    •           T1 (4h)
+                        -           US2 (3p)
+                                    •           T2 (3h)
+ 
+ 
+(... y muchas mas, supongamos que la lista tiene diez EPICS)
+ 
+ 
+Nos piden que desarrollemos dos funcionalidades:
+ 
+1) Mostrar un listado por consola que muestre un listado de tuplas (Nombre equipo, total de horas), siendo el total de horas de un equipo la suma de todas las horas de tareas de features.
+ 
+Ejemplo: 
+ 
+equipo|horas
+--------------------
+Warriors|7h
+Vikings|10h
+Jedi|20h
+BlackOps|5h
+ 
+2) Mostrar un listado plano de tuplas (equipo, userstory, HORAS de sus tareas):
+ 
+equipo|us|horas
+-----------------
+warriors|US1|4h
+warriors|US2|3h
+vikings|US3|4h
+vikings|US4|6h
+...
+ 
+Nos han dicho que la estructura que almacena la lista de epics podría ser un array o una lista encadenada. El código desarrollado debe ser compatible con ambas implementaciones.
+
+
+            //http://best-practice-software-engineering.ifs.tuwien.ac.at/patterns/iterator.html
+            //http://www.primaryobjects.com/2008/01/29/using-the-iterator-pattern-in-c-asp-net/
+--------------------------------------------------
+--------------Visitorrr---------------------------
+--------------------------------------------------
+De la Wiki: 
 Propósito
 
 Es un patrón de comportamiento, que permite definir una operación sobre objetos de una jerarquía de clases sin modificar las clases sobre las que opera. Representa una operación que se realiza sobre los elementos que conforman la estructura de un objeto.

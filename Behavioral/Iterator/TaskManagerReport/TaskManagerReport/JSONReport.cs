@@ -3,16 +3,8 @@ using System.Collections.Generic;
 
 namespace TaskManagerReport
 {
-    class JSONReport : IVisitor
+    class JSONReport
     {
-        //TODO use serialize json object 
-        public void Generate(List<IVisitable> teamWork)
-        {
-            foreach (var element in teamWork)
-            {
-                element.Accept(this);
-            }
-        }
 
         public void Visit(Epic epic)
         {            
@@ -26,7 +18,7 @@ namespace TaskManagerReport
             Console.WriteLine("{0}", display);
         }
 
-        public void Visit(US task)
+        public void Visit(Us task)
         {            
             var display = "UserHistories: [{\n"
                           + "type: UserHistory,"

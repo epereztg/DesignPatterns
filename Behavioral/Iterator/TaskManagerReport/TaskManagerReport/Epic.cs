@@ -6,14 +6,17 @@ namespace TaskManagerReport
     public class Epic : IComponent, IVisitable
     {
         private readonly List<IComponent> children = new List<IComponent>();
-        public double budget;
-        public string name;
+        public double Budget;
+        public string Name;
         public Epic(double budget, string name)
         {
-            this.budget = budget;
-            this.name = name;
+            this.Budget = budget;
+            this.Name = name;
         }
-
+        public IIterator CreateIterator()
+        {
+            return new TaskIterator(children);
+        }
         public void Add(IComponent component)
         {
             this.children.Add(component);
@@ -28,7 +31,6 @@ namespace TaskManagerReport
             }
             return horas;
         }
-
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);
@@ -37,5 +39,6 @@ namespace TaskManagerReport
                 component.Accept(visitor);
             }
         }
+
     }
 }

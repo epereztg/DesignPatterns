@@ -2,46 +2,44 @@
 
 namespace TaskManagerReport
 {
-    public class US : IComponent, IVisitable
+    public class Us : IComponent, IVisitable
     {
-        private readonly List<IComponent> children = new List<IComponent>();
-        public int storyPoints;
-        public string name;
+        private readonly List<IComponent> _children = new List<IComponent>();
+        public int StoryPoints;
+        public string Name;
 
-        public US(int storyPoints, string name)
+        public Us(int storyPoints, string name)
         {
-            this.storyPoints = storyPoints;
-            this.name = name;
+            this.StoryPoints = storyPoints;
+            this.Name = name;
         }
-
+        public IIterator CreateIterator()
+        {
+            return new TaskIterator(_children);
+        }
 
         public void Add(IComponent component)
         {
-            this.children.Add(component);
+            this._children.Add(component);
         }
-
 
         public int Horas()
         {
-
             int horas = 0;
-            foreach (var component in this.children)
+            foreach (var component in this._children)
             {
                 horas += component.Horas();
-
             }
             return horas;
         }
-
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);
 
-            foreach (var component in this.children)
+            foreach (var component in this._children)
             {
                 component.Accept(visitor);
             }
-
         }
     }
 }

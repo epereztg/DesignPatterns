@@ -6,9 +6,7 @@ namespace TaskManagerReport
     class TaskIterator : IIterator
     {
         private readonly List<IComponent> _itemsList = new List<IComponent>();
-        //public string team;
-        //public string name;
-        private int position = 0;
+        private int _position = 0;
 
         public TaskIterator(List<IComponent> itemsList)
         {
@@ -17,7 +15,7 @@ namespace TaskManagerReport
 
         public bool HasNext()
         {
-            if (position < _itemsList.Count)
+            if (_position < _itemsList.Count)
             {
                 return true;
             }
@@ -29,8 +27,8 @@ namespace TaskManagerReport
 
         public object Next()
         {
-            IComponent itemContents = _itemsList[position];
-            position++;
+            IComponent itemContents = _itemsList[_position];
+            _position++;
             return itemContents;
         }
     }

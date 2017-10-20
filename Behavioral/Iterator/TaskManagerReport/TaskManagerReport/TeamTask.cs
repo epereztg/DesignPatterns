@@ -12,7 +12,10 @@ namespace TaskManagerReport
             this.horas = horas;
             this.name = name;
         }
-
+        public IIterator CreateIterator()
+        {
+            return new TaskIterator(null);
+        }
         public void Add(IComponent c)
         {
             Console.WriteLine("Cannot add to a leaf");
@@ -22,10 +25,11 @@ namespace TaskManagerReport
         {
             return this.horas;
         }
-
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);
         }
+
+
     }
 }
